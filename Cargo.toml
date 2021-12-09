@@ -2,4 +2,5 @@
 
 members = [
     "talib",
+    "talib_ext"
 ]
