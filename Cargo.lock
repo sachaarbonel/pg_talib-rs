@@ -1692,6 +1692,7 @@ dependencies = [
  "pgx",
  "pgx-macros",
  "pgx-tests",
+ "talib",
 ]
 
 [[package]]
