@@ -27,7 +27,7 @@ fn ema(inReal: &[f64], inTimePeriod: i64, k1: f64) -> Vec<f64> {
     outReal
 }
 
-fn Macd(
+pub fn Macd(
     inReal: &[f64],
     mut inFastPeriod: i64,
     mut inSlowPeriod: i64,
@@ -79,8 +79,14 @@ fn Macd(
     }
     (outMACD, outMACDSignal, outMACDHist)
 }
-fn main() {
-    let Close = vec![
+
+#[cfg(test)]
+mod tests {
+    use crate::Macd;
+
+    #[test]
+    fn it_works() {
+        let Close = vec![
         201.28, 197.64, 195.78, 198.22, 201.74, 200.12, 198.55, 197.99, 196.8, 195.0, 197.55,
         197.97, 198.97, 201.93, 200.83, 201.3, 198.64, 196.09, 197.91, 195.42, 197.84, 200.7,
         199.93, 201.95, 201.39, 200.49, 202.63, 202.75, 204.7, 205.54, 205.86, 205.88, 205.73,
@@ -361,4 +367,5 @@ fn main() {
         -0.06472914201052049,
     ];
     assert_eq!(macd, expected_result);
+    }
 }

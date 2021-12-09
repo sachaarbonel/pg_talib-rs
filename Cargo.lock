@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "pg_talib_rs"
+name = "talib"
 version = "0.1.0"
