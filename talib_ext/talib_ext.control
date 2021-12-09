@@ -1,0 +1,5 @@
+comment = 'talib_ext:  Created by pgx'
+default_version = '1.0'
+module_pathname = '$libdir/talib_ext'
+relocatable = false
+superuser = false
